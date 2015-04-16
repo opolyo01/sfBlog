@@ -15,7 +15,9 @@ var myRouter = Backbone.Router.extend({
     },
 
     homeRoute: function(){
-        this.home = new HomeView({el: $("#container")});
+        $.get("/Blog/api", function(resp){
+          new HomeView({el: $("#container"), model: resp.blog});
+        });
     },
 
     postRoute: function () {
@@ -32,7 +34,13 @@ var myRouter = Backbone.Router.extend({
     },
 
     deleteRoute: function(id){
-        
+        $.ajax({
+            url: '/Blog/api/'+id,
+            type: 'DELETE',
+            success: function(result) {
+                console.log("blog deleted - "+id);
+            }
+        });
     }
 });
 
