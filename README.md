@@ -1,4 +1,7 @@
-# sfBlog - Simple Node/Backbone CRUD that uses session memory storage for temp persistance
+# sfBlog 
+- Simple Node/Backbone CRUD that uses session memory storage for temp persistance
+
+# Installations
 
 $ npm install
 $ bower install
