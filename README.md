@@ -3,8 +3,10 @@
 
 # Installations
 
+~~~
 $ npm install
 $ bower install
 $ npm start
 Or for node hot deploy
 $ npm run devStart
+~~~
